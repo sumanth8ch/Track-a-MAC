@@ -1,0 +1,65 @@
+ git log
+commit 99cbd4a2fc5a5ed98faf5ed98accaae7926656b3 (HEAD -> master, origin/master, origin/HEAD)
+Author: sumanth8ch <43502277+sumanth8ch@users.noreply.github.com>
+Date:   Sun Oct 27 23:17:28 2019 +0100
+
+    Rename backend.py to backend
+
+commit 842902f8da20a418c7b5453e94066d9fa4280958
+Author: haritha11d <43556074+haritha11d@users.noreply.github.com>
+Date:   Sun Oct 27 22:49:32 2019 +0100
+
+    Create config.php
+
+commit ab2132aa68c6ab487a27c1c6d0ceee55579cce8d
+Author: mbut17 <43580269+mbut17@users.noreply.github.com>
+Date:   Sun Oct 27 22:29:10 2019 +0100
+
+    Create search.php
+
+commit e5692c348cbdb339f0f1990f9435991c5422240b
+Author: Niheeth Koneru <39443048+Niheeth@users.noreply.github.com>
+Date:   Sun Oct 27 22:26:21 2019 +0100
+
+    Create removeDevice.php
+
+commit 92813e8a0d18d90591263a18bc94b57ccd9127b2
+Author: sumanth8ch <43502277+sumanth8ch@users.noreply.github.com>
+Date:   Sun Oct 27 19:37:16 2019 +0100
+
+    Delete addDevice.php.php
+
+commit c563a36e82f67a649e2a098685bc40eeeba05cdd
+Author: alekhya5 <57017119+alekhya5@users.noreply.github.com>
+Date:   Sun Oct 27 19:33:35 2019 +0100
+
+    Create addDevice.php
+
+commit 38d28c8ba933b68cdb3d6f63295ac14ee4d4ae8e
+Author: katk17 <43555595+katk17@users.noreply.github.com>
+Date:   Sun Oct 27 19:30:44 2019 +0100
+
+    Create listDevs.php
+
+commit 930bc4f12ec3dcfbfdb348a80f883977d655d1c7
+Author: alekhya5 <57017119+alekhya5@users.noreply.github.com>
+Date:   Sun Oct 27 19:30:29 2019 +0100
+
+    Add files via upload
+
+commit 3d76d6aee8ba2fbfe58d73ac797caf7228550cf3
+Author: kireetipatamsetti <43538568+kireetipatamsetti@users.noreply.github.com>
+Date:   Sun Oct 27 19:18:16 2019 +0100
+
+    Create list.php
+
+commit 48d1d28699487fed245aa02cfb2f73fd2de8c275
+Author: sumanth8ch <43502277+sumanth8ch@users.noreply.github.com>
+Date:   Fri Oct 25 21:31:30 2019 +0200
+
+    Create backend.py
+
+commit 87d5ce8f26d8a7070f460ed81eee4932b0911825
+Author: sumanth8ch <43502277+sumanth8ch@users.noreply.github.com>
+Date:   Fri Oct 25 20:09:06 2019 +0200
+
