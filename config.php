@@ -13,7 +13,7 @@ $result = $db->exec($trapdata);
        $db->lastErrorMsg();
    }
 $manager =<<<EOF
-      CREATE TABLE IF NOT EXISTS manager(ip VARCHAR NOT NULL,port VARCHAR NOT NULL,community STRING NOT NULL,version VARCHAR NOT NULL,firstprob VARCHAR NULL,lastprob VARCHAR NULL);
+      CREATE TABLE IF NOT EXISTS manager(ip VARCHAR NOT NULL,port VARCHAR NOT NULL,community STRING NOT NULL,version VARCHAR NOT NULL,firstprob VARCHAR NULL,lastprob VARCHAR NULL,failed_attempts INT DEFAULT 0 NOT NULL);
 EOF;
 $result = $db->exec($manager);
    if(!$result){
