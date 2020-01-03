@@ -12,26 +12,22 @@ while True:
     details = database.execute("select * from manager")
     for i in details:
         ipaddress = i[0]
-        port = int(i[1])
+        port = i[1]
         community = i[2]
         version = int(i[3])
         try:
-            session = Session(hostname=ipaddress,port=port, community=community, version=version,timeout=5,retries=2)
-
-        except Exception as e:
-            print(e)
-            failed_attempts = database.execute("select failed_attempts from manager where (ip=? and port=?)",(ipaddress, port))
-            def fail(x):
-                for i in failed_attempts.fetchone():
-                    return i
-            x = fail(failed_attempts)
+            session = Session(hostname=ipaddress,remote_port=int(port), community=community, version=version,timeout= 5,retries=2)
+        except Exception as e :
+            failed_attempts = database.execute("select failed_attempts from manager where (ip=? and port=?)",(ipaddress,port))
+            for i in failed_attempts.fetchone():
+                x = i
             x += 1
+            print(x)
             database.execute("update manager set failed_attempts=? where (ip=? and port=?)",(x,ipaddress,port))
             database.commit()
 
         starttime = time.time()
         finishtime=time.ctime(int(starttime))
-        print "ok"
         try:
             macs     = session.walk('.1.3.6.1.2.1.17.4.3.1.1')
             ports = session.walk('.1.3.6.1.2.1.17.4.3.1.2')
@@ -92,5 +88,7 @@ while True:
                 portlan = "1"
                 database.execute(""" UPDATE finalproject SET VLAN = ?  where PORT = ? """, (vlanname[i],vlansnum[i]))
                 database.commit()
-            database.close
-            time.sleep(60)
+        except:
+            continue
+    database.close
+    time.sleep(60)
